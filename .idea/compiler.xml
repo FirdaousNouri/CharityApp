@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="GatewayMS" />
+        <module name="ConfigMS" />
+        <module name="DiscoveryMS" />
+      </profile>
+      <profile name="Annotation profile for PaimentMS" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/unknown/lombok-unknown.jar" />
+        </processorPath>
+        <module name="AuthorizationMS" />
+        <module name="PaimentMS" />
+      </profile>
+      <profile name="Annotation profile for UserMS" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.30/lombok-1.18.30.jar" />
+        </processorPath>
+        <module name="UserMS" />
+        <module name="OrganisationMS" />
+        <module name="DonationMS" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Gateway" target="21" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="AuthorizationMS" options="-parameters" />
+      <module name="ConfigMS" options="-parameters" />
+      <module name="DiscoveryMS" options="-parameters" />
+      <module name="DonationMS" options="-parameters" />
+      <module name="Gateway" options="-parameters" />
+      <module name="GatewayMS" options="-parameters" />
+      <module name="OrganisationMS" options="-parameters" />
+      <module name="PaimentMS" options="-parameters" />
+      <module name="UserMS" options="-parameters" />
+    </option>
+  </component>
+</project>
